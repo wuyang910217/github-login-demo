@@ -1,19 +1,27 @@
 <head>
-  <title>Github  User Login Demo</title>
+    <title>Github User Login Demo</title>
 </head>
 
 <body>
-  <div class="demo">
-  {{> demo}}
-  </div>
-    <p>user info</p>
+    <div class="demo">
+        {{> demo}}
+    </div>
+    {{> userInfo}}
 </body>
-
 <template name="demo">
-  <div>
-    {{ >loginButtons }}
-  </div>
-  <div>
-    <button>Github账户登录</button>
-  </div>
+    <div>
+        {{ >loginButtons }}
+    </div>
+    <div>
+        <button id="login">Github账户登录</button>
+    </div>
+    <button id='logout'> 退出</button>
+</template>
+<template name='userInfo'>
+    <h3>登录信息</h3>
+    <h3>用户名： {{ user.profile.username }} </h3>
+    <h3>邮箱： {{ user.profile.email }} </h3>
+    <h3>Github地址： {{ user.profile.url }}</h3>
+    <h3>头像地址： {{ user.profile.avatar_url }}</h3>
+    <img src="{{ user.profile.avatar_url }}">
 </template>

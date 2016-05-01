@@ -14,8 +14,16 @@ button {
 button:hover {
   color: red;
 }
-p {
-  margin-top: 50px;
+h3 {
+  margin-top: 30px;
   text-align: center;
   color: #fff;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }

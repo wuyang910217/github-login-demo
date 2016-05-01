@@ -1,12 +1,25 @@
 import { Template } from 'meteor/templating';
-import { ReactiveVar } from 'meteor/reactive-var';
+import { Meteor } from 'meteor/meteor';
 
 import './main.html';
 
+Template.userInfo.helpers({
+  user() {
+    if (Meteor.user()) {
+      return Meteor.users.findOne();
+    }
+  },
+});
 
 Template.demo.events({
-  'click #github-login': function(event, instance) {
-    event.preventDefault();
-    console.log('log');
-  }
+  'click #login': function(event) {
+    Meteor.loginWithGithub(function(err) {
+     if (err)
+         console.log(err.reason);
+ });
+ },
+ 'click #logout': function(event) {
+  event.preventDefault();
+  Meteor.logout();
+ }
 });
