@@ -7,5 +7,6 @@ import './main.html';
 Template.demo.events({
   'click #github-login': function(event, instance) {
     event.preventDefault();
+    console.log('log');
   }
 });

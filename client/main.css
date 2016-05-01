@@ -1,11 +1,21 @@
 /* CSS declarations go here */
-
-.default {
-  padding: 20px;
+body {
+  background-color: #727272;
 }
-.github {
-  padding: 20px;
+.demo {
+  display:  flex;
+  margin-top: 100px;
+  justify-content: center;
 }
-.user-info {
-  padding: 20px;
+button {
+  margin-left: 20px;
+  color: #0097a7;
+}
+button:hover {
+  color: red;
+}
+p {
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
 }
