@@ -1,1 +1,11 @@
 /* CSS declarations go here */
+
+.default {
+  padding: 20px;
+}
+.github {
+  padding: 20px;
+}
+.user-info {
+  padding: 20px;
+}
